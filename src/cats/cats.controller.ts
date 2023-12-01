@@ -27,12 +27,12 @@ export class CatsController {
 
     @Get(':id')
     findOne(@Param('id') id: string) {
-        return this.catsService.findOneById(id);
+        return this.catsService.findOne(id);
     }
 
     @Patch(':id')
     update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
-        return this.catsService.findOneAndUpdate(id, updateCatDto);
+        return this.catsService.update(id, updateCatDto);
     }
 
     @Delete(':id')
